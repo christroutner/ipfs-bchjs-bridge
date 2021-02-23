@@ -52,7 +52,7 @@ async function startClientNode() {
     console.log("... IPFS is ready.\n");
 
     // Instantiate the IPFS Coordination library.
-    ipfsCoord = new IpfsCoord({ ipfs, bchjs, type: "node.js", isCircuitRelay: true });
+    ipfsCoord = new IpfsCoord({ ipfs, bchjs, type: "node.js", isCircuitRelay: false });
     await ipfsCoord.isReady();
     console.log("IPFS coordination is ready.");
 
