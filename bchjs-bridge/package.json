@@ -2,9 +2,9 @@
   "name": "bchjs-bridge",
   "version": "1.0.0",
   "description": "A node.js app that instantiates bch-js then gives access to it over IPFS",
-  "main": "rest-service.js",
+  "main": "bchjs-bridge.js",
   "scripts": {
-    "start": "node ipfs-chat-bot.js",
+    "start": "node bchjs-bridge.js",
     "lint": "standard --env mocha --fix"
   },
   "keywords": [

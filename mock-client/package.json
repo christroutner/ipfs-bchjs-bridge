@@ -2,9 +2,9 @@
   "name": "mock-client.js",
   "version": "1.0.0",
   "description": "Simulates a client by connecting to the bch-js bridge and making a series of calls",
-  "main": "rest-service.js",
+  "main": "mock-client.js",
   "scripts": {
-    "start": "node node2.js",
+    "start": "node mock-client.js",
     "lint": "standard --env mocha --fix"
   },
   "keywords": [
@@ -28,8 +28,9 @@
   },
   "repository": "christroutner/ipfs-pubsub-prototype",
   "dependencies": {
+    "@psf/bch-js": "^4.15.0",
     "ipfs": "^0.50.1",
-    "orbit-db": "^0.26.0"
+    "ipfs-coord": "^2.1.4"
   },
   "devDependencies": {
     "chai": "^4.1.2",

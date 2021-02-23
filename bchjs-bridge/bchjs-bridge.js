@@ -5,12 +5,6 @@
 const BCHJS = require('@psf/bch-js')
 const bchjs = new BCHJS()
 
-// Relay nodes.
-// const CHAT_ADDR =
-//   "/ip4/138.68.212.34/tcp/4002/ipfs/QmaUW4oCVPUFLRqeSjvhHwGFJHGWrYWLBEt7WxnexDm3Xa";
-// const BOOTSTRAP_ADDR =
-//   "/ip4/116.203.193.74/tcp/4001/ipfs/QmNZktxkfScScnHCFSGKELH3YRqdxHQ3Le9rAoRLhZ6vgL";
-
 // Pubsub room.
 const CHAT_ROOM_NAME = "psf-ipfs-chat-001";
 
@@ -24,7 +18,7 @@ let ipfs; // instance of IPFS for this node.
 
 // Ipfs Options
 const ipfsOptions = {
-  repo: "./chatdata",
+  repo: "./ipfs-data",
   start: true,
   EXPERIMENTAL: {
     pubsub: true
@@ -61,8 +55,8 @@ async function startClientNode() {
     // Send a chat message to the chat room.
     setInterval(async function() {
       const now = new Date();
-      const msg = `Message from chat bot at ${now.toLocaleString()}`;
-      const handle = "chat bot";
+      const msg = `Message from bchjs bridge at ${now.toLocaleString()}`;
+      const handle = "bchjs bridge";
       const chatObj = {
         message: msg,
         handle: handle
